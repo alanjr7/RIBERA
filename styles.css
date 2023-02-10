@@ -40,9 +40,11 @@ nav label span {
     text-align: center;
   background-color: #20262E;
   }
-  nav li{
+   nav li{
     background-color: #20262E;
-
+    height: 30px;
+    text-align: center;
+    font-size: large;
   }
   input{
     display: none;
