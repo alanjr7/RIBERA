@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>catalogo de Escritorios</title>
+    <style>
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #3d1240;
+        }
+
+        nav {
+            display: flex;
+            margin: auto;
+            background-color: #460C68;
+            text-align: center;
+            align-items: center;
+            height: 40px;
+            margin-top: 15px;
+        }
+
+        a {
+            color: #bbae5d;
+            margin-left: 15px;
+            font-family: 'Museo Sans", Arial, Helvetica, sans-serif';
+            background-color: #460C68;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #CD5888;
+        }
+
+        nav button {
+            color: #bbae5d;
+            font-family: 'Museo Sans", Arial, Helvetica, sans-serif';
+            padding: 0.7em 1.7em;
+            font-size: 18px;
+            border-radius: 0.5em;
+            background: #CD5888;
+            border: 1px solid #e8e8e8;
+            transition: all .3s;
+
+        }
+
+        button:active {
+            color: #666;
+            box-shadow: inset 4px 4px 12px #c5c5c5,
+                inset -4px -4px 12px #ffffff;
+        }
+
+        .card {
+            height: 254px;
+            width: 190px;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+            border-radius: 1em;
+            box-shadow: 0 0 20px 8px #d0d0d0;
+            margin: auto;
+            margin-bottom: 25px;
+            margin-top: 15px;
+        }
+
+        /*Image*/
+        .card-image {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+            background-image: url('https://github.com/alanjr7/RIBERA/blob/main/escritorios%20web/D_NQ_NP_750134-MLV28791850432_112018-F.jpg?raw=true');
+
+        }
+
+        /*Image*/
+        .card-image2 {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+            background-image: url('https://github.com/alanjr7/RIBERA/blob/main/escritorios%20web/OIP%20(1).jpeg?raw=true');
+
+        }
+
+        /*Image*/
+        .card-image3 {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+            background-image: url('https://github.com/alanjr7/RIBERA/blob/main/escritorios%20web/OIP%20(2).jpeg?raw=true');
+
+        }
+
+        /*Image*/
+        .card-image4 {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+            background-image: url('https://github.com/alanjr7/RIBERA/blob/main/escritorios%20web/OIP%20(3).jpeg?raw=true');
+
+        }
+
+        /*Image*/
+        .card-image5 {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+            background-image: url('https://github.com/alanjr7/RIBERA/blob/main/escritorios%20web/OIP%20(4).jpeg?raw=true');
+
+        }
+
+        /*Image*/
+        .card-image6 {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+            background-image: url('https://github.com/alanjr7/RIBERA/blob/main/escritorios%20web/OIP%20(5).jpeg?raw=true');
+
+        }
+
+        /*Image*/
+        .card-image7 {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+            background-image: url('https://github.com/alanjr7/RIBERA/blob/main/escritorios%20web/OIP%20(6).jpeg?raw=true');
+
+        }
+
+        /*Image*/
+        .card-image8 {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+            background-image: url('https://github.com/alanjr7/RIBERA/blob/main/escritorios%20web/OIP%20(7).jpeg?raw=true');
+
+        }
+
+        /*Image*/
+        .card-image9 {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+            background-image: url('https://github.com/alanjr7/RIBERA/blob/main/escritorios%20web/OIP%20(8).jpeg?raw=true');
+
+        }
+
+        .card-image10 {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+            background-image: url('https://github.com/alanjr7/RIBERA/blob/main/escritorios%20web/R.jpeg?raw=true');
+
+        }
+
+
+        /*Description */
+        .card-description {
+            display: flex;
+            position: absolute;
+            gap: 1em;
+            flex-direction: column;
+            background-color: #f5f5f5;
+            height: 70%;
+            bottom: 0;
+            border-radius: 1em 1em 0 0;
+            transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+            padding: 1rem;
+        }
+
+        /*Text*/
+        .text-title {
+            font-size: 1.4em;
+            font-weight: 700;
+            background-color: #f5f5f5;
+            overflow: auto;
+        }
+
+        .text-body {
+            font-size: 1em;
+            line-height: 150%;
+            background-color: #f5f5f5;
+        }
+
+
+        /* Hover states */
+
+        .card:hover .card-description {
+            z-index: 2;
+            transform: translateY(100%);
+        }
+
+
+
+        .nombre {
+            margin-top: 15px;
+            font-family: 'Museo Sans", Arial, Helvetica, sans-serif';
+            font-size: 15.95px;
+            line-height: 22.7857px;
+            text-align: center;
+            letter-spacing: normal;
+            color: #bbae5d;
+            margin-bottom: 1px;
+        }
+
+        .nombre h2 {
+            margin-top: 1px;
+            font-size: small;
+            font-family: 'Museo Sans", Arial, Helvetica, sans-serif';
+        }
+
+        .cta {
+            border: none;
+            background: #f5f5f5;
+        }
+
+        .cta span {
+            padding-bottom: 7px;
+            letter-spacing: 4px;
+            font-size: 14px;
+            padding-right: 15px;
+            background-color: #f5f5f5;
+            text-transform: uppercase;
+        }
+
+        .cta svg {
+            transform: translateX(-8px);
+            transition: all 0.3s ease;
+            background-color: #f5f5f5;
+        }
+
+        .cta:hover svg {
+            transform: translateX(0);
+        }
+
+        .cta:active svg {
+            transform: scale(0.9);
+        }
+
+        .hover-underline-animation {
+            position: relative;
+            color: black;
+            padding-bottom: 20px;
+        }
+
+        .hover-underline-animation:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #000000;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .cta:hover .hover-underline-animation:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+
+        }
+
+        .cssbuttons-io-button {
+            background: #A370F0;
+            color: white;
+            font-family: inherit;
+            padding: 0.35em;
+            padding-left: 1.2em;
+            font-size: 17px;
+            font-weight: 500;
+            border-radius: 0.9em;
+            border: none;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            margin: auto;
+            box-shadow: inset 0 0 1.6em -0.6em #714da6;
+            overflow: hidden;
+            position: relative;
+            height: 2.8em;
+            padding-right: 3.3em;
+            margin-bottom: 70px;
+        }
+
+        .cssbuttons-io-button .icon {
+            background: white;
+            margin-left: 1em;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 2.2em;
+            width: 2.2em;
+            border-radius: 0.7em;
+            box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+            right: 0.3em;
+            transition: all 0.3s;
+        }
+
+        .cssbuttons-io-button:hover .icon {
+            width: calc(100% - 0.6em);
+        }
+
+        .cssbuttons-io-button .icon svg {
+            width: 1.1em;
+            transition: transform 0.3s;
+            color: #7b52b9;
+        }
+
+        .cssbuttons-io-button:hover .icon svg {
+            transform: translateX(0.1em);
+        }
+
+        .cssbuttons-io-button:active .icon {
+            transform: scale(0.95);
+        }
+
+        section {
+
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .final{
+    background-color:#460C68;
+    margin: 15px;
+    color: #bbae5d;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+  }   
+    </style>
+</head>
+
+<body>
+    <div class="nombre">
+        <h1> Ribera muebles</h1>
+        <h2>ribera forniture company</h2>
+        <H3>CATALOGO de ESCRITORIOS</H3>
+    </div>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="armarios.html">Armarios</a>
+        <a href="sillas.html">Sillas</a>
+        <a href="mesas.html">Mesas</a>
+        <a href="camas.html">Camas</a>
+
+    </nav>
+    <section>
+
+        <div class="card">
+            <div class="card-image"></div>
+            <div class="card-description">
+                <p class="text-title"> Card Title</p>
+                <button class="cta" onclick="">
+                    <span class="hover-underline-animation"> Comprar </span>
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                        id="arrow-horizontal">
+                        <path transform="translate(30)"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                            id="Path_10"></path>
+                    </svg>
+                </button>
+                <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image2"></div>
+            <div class="card-description">
+                <p class="text-title"> Card Title</p>
+                <button class="cta" onclick="">
+                    <span class="hover-underline-animation"> Comprar </span>
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                        id="arrow-horizontal">
+                        <path transform="translate(30)"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                            id="Path_10"></path>
+                    </svg>
+                </button>
+                <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image3"></div>
+            <div class="card-description">
+                <p class="text-title"> Card Title</p>
+                <button class="cta" onclick="">
+                    <span class="hover-underline-animation"> Comprar </span>
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                        id="arrow-horizontal">
+                        <path transform="translate(30)"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                            id="Path_10"></path>
+                    </svg>
+                </button>
+                <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image4"></div>
+            <div class="card-description">
+                <p class="text-title"> Card Title</p>
+                <button class="cta" onclick="">
+                    <span class="hover-underline-animation"> Comprar </span>
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                        id="arrow-horizontal">
+                        <path transform="translate(30)"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                            id="Path_10"></path>
+                    </svg>
+                </button>
+                <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image5"></div>
+            <div class="card-description">
+                <p class="text-title"> Card Title</p>
+                <button class="cta" onclick="">
+                    <span class="hover-underline-animation"> Comprar </span>
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                        id="arrow-horizontal">
+                        <path transform="translate(30)"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                            id="Path_10"></path>
+                    </svg>
+                </button>
+                <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image6"></div>
+            <div class="card-description">
+                <p class="text-title"> Card Title</p>
+                <button class="cta" onclick="">
+                    <span class="hover-underline-animation"> Comprar </span>
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                        id="arrow-horizontal">
+                        <path transform="translate(30)"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                            id="Path_10"></path>
+                    </svg>
+                </button>
+                <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image7"></div>
+            <div class="card-description">
+                <p class="text-title"> Card Title</p>
+                <button class="cta" onclick="">
+                    <span class="hover-underline-animation"> Comprar </span>
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                        id="arrow-horizontal">
+                        <path transform="translate(30)"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                            id="Path_10"></path>
+                    </svg>
+                </button>
+                <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image8"></div>
+            <div class="card-description">
+                <p class="text-title"> Card Title</p>
+                <button class="cta" onclick="">
+                    <span class="hover-underline-animation"> Comprar </span>
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                        id="arrow-horizontal">
+                        <path transform="translate(30)"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                            id="Path_10"></path>
+                    </svg>
+                </button>
+                <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image9"></div>
+            <div class="card-description">
+                <p class="text-title"> Card Title</p>
+                <button class="cta" onclick="">
+                    <span class="hover-underline-animation"> Comprar </span>
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                        id="arrow-horizontal">
+                        <path transform="translate(30)"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                            id="Path_10"></path>
+                    </svg>
+                </button>
+                <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image10"></div>
+            <div class="card-description">
+                <p class="text-title"> Card Title</p>
+                <button class="cta" onclick="">
+                    <span class="hover-underline-animation"> Comprar </span>
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                        id="arrow-horizontal">
+                        <path transform="translate(30)"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                            id="Path_10"></path>
+                    </svg>
+                </button>
+                <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+    </section>
+    <p class="final">Si tienes un modelo que no aparece en el catalogo envianoslo a nuestro whatsapp con gusto te lo fabricamos</p>
+  
+    <button class="cssbuttons-io-button" onclick="sendWhatsAppMessage()"> GO mas modelos!!
+        <div class="icon">
+            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                    fill="currentColor"></path>
+            </svg>
+        </div>
+    </button>
+    <script>
+        function sendWhatsAppMessage() {
+            window.location.href = "https://api.whatsapp.com/send?phone=+59163603050&text=quiero%20ver%20más%20modelos%20de%20escritorios";
+        }
+
+        document.querySelectorAll("section button").forEach(function(button) {
+    button.id = "whatsapp-button";
+  });
+    const buttons = document.querySelectorAll('#whatsapp-button');
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const text = encodeURI('quiero comprar un modelo de escritorios');
+      const phoneNumber = '+59163603050'; // reemplazar con tu número de WhatsApp
+      window.open(`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${text}`);
+    });
+  });
+
+  
+  // Función para eliminar el texto
+function removeText(text) {
+  // Obtener todos los elementos del documento
+  var elements = document.body.getElementsByTagName('*');
+
+  // Recorrer todos los elementos
+  for (var i = 0; i < elements.length; i++) {
+    var element = elements[i];
+
+    // Recorrer todos los nodos de texto dentro del elemento
+    for (var j = 0; j < element.childNodes.length; j++) {
+      var node = element.childNodes[j];
+
+      // Verificar si el nodo es un nodo de texto
+      if (node.nodeType === 3) {
+        // Reemplazar el texto buscado con una cadena vacía
+        var replacedText = node.nodeValue.replace(text, '');
+        if (replacedText !== node.nodeValue) {
+          element.replaceChild(document.createTextNode(replacedText), node);
+        }
+      }
+    }
+  }
+}
+
+// Ejecutar la función para eliminar el texto "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+removeText('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.');
+
+// Función para buscar y reemplazar texto
+function replaceText(search, replace) {
+  // Obtener todos los elementos del documento
+  var elements = document.body.getElementsByTagName('*');
+
+  // Recorrer todos los elementos
+  for (var i = 0; i < elements.length; i++) {
+    var element = elements[i];
+
+    // Recorrer todos los nodos de texto dentro del elemento
+    for (var j = 0; j < element.childNodes.length; j++) {
+      var node = element.childNodes[j];
+
+      // Verificar si el nodo es un nodo de texto
+      if (node.nodeType === 3) {
+        // Reemplazar el texto buscado con el texto de reemplazo
+        var replacedText = node.nodeValue.replace(search, replace);
+        if (replacedText !== node.nodeValue) {
+          element.replaceChild(document.createTextNode(replacedText), node);
+        }
+      }
+    }
+  }
+}
+
+// Ejecutar la función para buscar y reemplazar "Card title" con "armario"
+replaceText('Card Title', 'escritorio');
+
+
+    </script>
+</body>
+
+</html>

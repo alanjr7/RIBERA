@@ -1,0 +1,178 @@
+*{
+    background-color:#3d1240 ;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+  display: flex;
+  margin: auto;
+  background-color:#460C68;
+  text-align: center;
+  align-items: center;
+  height: 40px;
+  margin-top: 15px;
+}
+a{
+color:#bbae5d;
+margin-left: 15px;
+font-family:'Museo Sans", Arial, Helvetica, sans-serif';  
+background-color:#460C68;
+text-decoration:none;
+}
+a:hover{
+  color: #CD5888;
+}
+nav button{
+  color: #bbae5d;
+  font-family:'Museo Sans", Arial, Helvetica, sans-serif';  
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #CD5888 ;
+  border: 1px solid #e8e8e8;
+  transition: all .3s;
+
+}
+button:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5,
+              inset -4px -4px 12px #ffffff;
+ }
+.card {
+    height: 254px;
+    width: 190px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border-radius: 1em;
+    box-shadow: 0 0 20px 8px #d0d0d0;
+    margin: auto;
+    margin-bottom: 25px;
+    margin-top: 15px;
+   }
+   
+    /*Image*/
+   .card-image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    
+    background-image: url('https://th.bing.com/th/id/OIP.BMxywjjuFUE5QPsAUBD38gHaHa?w=177&h=180&c=7&r=0&o=5&dpr=1.2&pid=1.7¿');
+ 
+   }
+     /*Image*/
+     .card-image2 {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+        
+        background-image: url('https://th.bing.com/th/id/OIP.nm34YoAix5Olwfu8QkNotgHaHa?w=177&h=180&c=7&r=0&o=5&dpr=1.2&pid=1.7');
+     
+       }
+   /*Description */
+   .card-description {
+    display: flex;
+    position: absolute;
+    gap: 1em;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    height: 70%;
+    bottom: 0;
+    border-radius: 1em 1em 0 0;
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    padding: 1rem;
+   }
+   
+   /*Text*/
+   .text-title {
+    font-size: 1.4em;
+    font-weight: 700;
+    background-color:#f5f5f5;
+    overflow: auto;
+   }
+   
+   .text-body {
+    font-size: 1em;
+    line-height: 150%;
+    background-color: #f5f5f5;
+   }
+   
+   
+   /* Hover states */
+   
+   .card:hover .card-description {
+    transform: translateY(100%);
+   }
+   
+   
+.nombre{
+margin-top: 15px;
+font-family:'Museo Sans", Arial, Helvetica, sans-serif';   
+font-size: 15.95px;
+line-height: 22.7857px;
+text-align: center;
+letter-spacing: normal;
+color:#bbae5d;
+margin-bottom: 1px;
+}
+.nombre h2{
+margin-top: 1px;
+font-size: small;
+font-family:'Museo Sans", Arial, Helvetica, sans-serif';
+}
+.cta {
+    border: none;
+    background:#f5f5f5;
+  }
+  
+  .cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    background-color: #f5f5f5;
+    text-transform: uppercase;
+  }
+  
+  .cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+    background-color: #f5f5f5;
+  }
+  
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta:active svg {
+    transform: scale(0.9);
+  }
+  
+  .hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+  }
+  
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  section{
+    display: flex;
+  }
